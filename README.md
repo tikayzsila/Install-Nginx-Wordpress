@@ -14,27 +14,30 @@ Inventory для хоста, на котором будет разворачив
 Переменные
 --------------
 
-group_vars: ansible_host, ansible_user, ansible_password, ansible_sudo_pass
-vars(main.yml): В этом файле описаны все пакеты для установки, также имя пользователя и пароль для wordpress db и имя проекта(исп. в конфигурации nginx)
+*group_vars*: ansible_host, ansible_user, ansible_password, ansible_sudo_pass
+*vars(main.yml)*: В этом файле описаны все пакеты для установки, также имя пользователя и пароль для wordpress db и имя проекта(исп. в конфигурации nginx)
 
-Проверить соединение можне командой:
-<sudo ansible ИМЯ_ХОСТА -i hosts -m ping -b >
+        
+*   Проверить соединение можно командой:
+
+        sudo ansible ИМЯ_ХОСТА -i hosts -m ping -b
 
 Пример использования роли
 ----------------
 
-Для использования роли достаточно в папке с inventory создать playbook(side.yml) со сл, содержанием:
-<
-- name: Nginx Setup
-  hosts: NginxHost4
-  become: yes
-  gather_facts: yes
-  roles:
-      - InstallWebServer
- >
+*   Для использования роли достаточно в папке с inventory создать playbook(side.yml) со сл, содержанием:
+
+        - name: Nginx Setup
+          hosts: NginxHost4
+          become: yes
+          gather_facts: yes
+          roles:
+              - InstallWebServer
+
 
 Запуск плейбука с ролью
 ----------------
+*   Запуск происходит командой:
 
-Запуск происходит командой:
-<sudo ansible-playbook -i hosts side.yml >
+        sudo ansible-playbook -i hosts side.yml
+ 
