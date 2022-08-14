@@ -1,0 +1,35 @@
+---
+# vars file for InstallWebServer
+      project_name: WebTest
+      root_password: root
+      wp_username: wordpress
+      wp_password: wordpress
+      packages:
+        - apt-transport-https
+        - ca-certificates
+        - curl
+        - net-tools
+        - tree
+        - gnupg
+        - certbot
+        - php
+        - php-fpm
+        - php-cli
+        - php-curl
+        - php-gd
+        - php-intl
+        - php-mbstring
+        - php-soap
+        - php-xml
+        - php-xmlrpc
+        - php-zip
+        - php-json
+        - php-pdo
+        - php-mysql
+        - php-pear
+        - php-bcmath
+        - mysql-server
+        - mysql-client
+        - python3-mysqldb
+        - libmysqlclient-dev
+
