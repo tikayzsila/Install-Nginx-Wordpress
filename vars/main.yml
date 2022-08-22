@@ -11,10 +11,8 @@
         - net-tools
         - tree
         - gnupg
-        - certbot
-        - php
-        - php-fpm
         - php-cli
+        - php-fpm
         - php-curl
         - php-gd
         - php-intl
@@ -32,4 +30,4 @@
         - mysql-client
         - python3-mysqldb
         - libmysqlclient-dev
-
+        
