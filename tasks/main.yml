@@ -3,12 +3,7 @@
     apt:
       pkg: "{{packages}}"
       state: present
-
-  - name: Remove Apache2
-    apt:
-      name: Apache2
-      state: absent
-
+      
   - name: Create Project Folder
     file:
       path: /var/www/{{project_name}}
